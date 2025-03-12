@@ -1,0 +1,69 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="row w-80 text-center">
+      <div class="col text-white p-3">
+        <div class="divImagenDerecha">
+            <img src="/assets/images/Imagen004VerticalClientAccess.webp" class="imagenDerecha img-fluid" alt="Imagen 1">
+        </div>
+      </div>
+      <div class="col text-white p-3">
+        <div class="container">
+            <div class="row">
+              <div class="col-12 text-white p-3 mb-2"><h1>Ingresar</h1></div>
+              <div class="col-12 text-white p-3 mb-2">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  
+                    <!-- Campo de usuario con Material -->
+                    <mat-form-field appearance="outline">
+                      <mat-label>Usuario</mat-label>
+                      <input matInput formControlName="usuario">
+                      <mat-error *ngIf="loginForm.get('usuario')?.hasError('required')">
+                        El usuario es obligatorio
+                      </mat-error>
+                      <mat-error *ngIf="loginForm.get('usuario')?.hasError('minlength')">
+                        Debe tener al menos 4 caracteres
+                      </mat-error>
+                    </mat-form-field>
+                  
+                    <!-- Campo de contraseña con Material -->
+                    <mat-form-field appearance="outline">
+                      <mat-label>Contraseña</mat-label>
+                      <input matInput type="password" formControlName="contraseña">
+                      <mat-error *ngIf="loginForm.get('contraseña')?.hasError('required')">
+                        La contraseña es obligatoria
+                      </mat-error>
+                      <mat-error *ngIf="loginForm.get('contraseña')?.hasError('minlength')">
+                        Debe tener al menos 6 caracteres
+                      </mat-error>
+                    </mat-form-field>
+                  
+                    <!-- Botón de enviar con Material -->
+                    <button mat-raised-button type="submit" [disabled]="loginForm.invalid" class="custom-button">
+                      INGRESAR
+                    </button>
+                </form>
+              </div>
+              <div class="col-12 p-3 mb-2" style="margin-top: 16px;">
+                  <a class="textApp">Cambio de contraseña</a>
+              </div>
+              <div class="col-12 p-3 mb-2" style="margin-top: -30px;">
+                  <a class="textApp">Recuperar contraseña</a>
+              </div>
+              <div class="col-12 p-3 mb-2" style="margin-top: -30px;">
+                  <a class="textApp">Registrarse</a>
+              </div>
+              
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+      
+
+     
+
+      
+

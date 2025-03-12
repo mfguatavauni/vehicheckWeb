@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-primario200: #c3a6f5;
+    --color-primario400: #7F39FB; 
+    --color-primario900: #23036A;
+    --color-secundario: #6c757d; 
+    --backGround: #EAEFFF;
+    --tamano-texto: 16px;
+  }
+
+
+html, body { height: 100%; }
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    color: var(--color-primario400);
+}
+
+
+body
+{
+    display: block;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
+                    url('/assets/images/fondoApp.svg'); /* SVG con transparencia */
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: var(--backGround);
+    
+}
+
+H1
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primario900);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+H2
+{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-primario400);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  button {
+    align-self: center;
+    width: 60%;
+    background-color: var(--color-primario400) !important;
+    color: white !important;
+  }
+  
+    
+    button:disabled {
+      background-color: gray;
+      cursor: not-allowed;
+    }
+
+
+.custom-button:disabled 
+{
+      background-color: #bdbdbd !important; /* Gris personalizado */
+      color: var(--color-secundario) !important;
+      opacity: 1 !important; /* Evita que Angular Material reduzca la opacidad */
+}
+    
+
+.buttonApp {
+    align-self: center;
+    width: 60%;
+    background-color: var(--color-primario400) !important;
+    color: white !important;
+  }
+  
+    
+    buttonpp:disabled {
+      background-color: gray;
+      cursor: not-allowed;
+    }
+
+.textApp
+{
+    color: var(--color-primario400);
+    text-align: center;
+    text-decoration: none;
+}
+
+.imagenDerecha{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 60%;
+    border-radius: 4px;
+}
+
+.linea-suave {
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(154, 151, 151, 0.3); /* Línea con opacidad */
+}
+
+.borde-derecha {
+    border-right: 0.5px solid var(--color-primario200); /* Puedes cambiar el grosor y color */
+    padding: 10px; /* Para que no se vea pegado al texto */
+}
+
+.centered-column-table {
+  text-align: center;
+}

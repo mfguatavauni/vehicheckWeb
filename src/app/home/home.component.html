@@ -1,0 +1,162 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <app-header></app-header>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 22px;">
+    <div class="col-md-12">
+        <div>
+            <div class="container text-center">
+                <div class="row">
+                  <div class="col-5">
+                    <div id="tableLeft">
+                        <div class="container text-center">
+                            <div class="row" style="margin-top: 100px; margin-bottom: 60px;">
+                                <div class="example-button-container">
+                                    <button mat-fab extended class="buttonApp" (click)="goReminder()">
+                                      <mat-icon>add</mat-icon>
+                                      Crear recordatorio
+                                    </button>
+                                  </div>
+                            </div>
+                            <div class="row" style="margin-top: 60px;">
+                                <h2 style="color: var(--color-secundario);">Próximos mantenimientos</h2>
+                            </div>
+                            <div class="row" style="margin-top: 6px;">
+                                <div id="tableListMant" class="container text-center">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                                                <mat-icon>sync</mat-icon>
+                                            </button>
+                                        </div>
+                                        <div class="col-10" style="text-align: left;">
+                                            <div class="row" style="margin: 0px;">
+                                                <div class="col-12" style="padding: 0px;;">
+                                                    <h4 style="margin: 0px;">Cambio de frenos</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="margin-top: -30;">
+                                                <div class="col-12">
+                                                    <p style="color: var(--color-secundario);">Llevar al taller autoandes para la revision llamar previamente al cel 3189999088</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                                                <mat-icon>sync</mat-icon>
+                                            </button>
+                                        </div>
+                                        <div class="col-10" style="text-align: left;">
+                                            <div class="row" style="margin: 0px;">
+                                                <div class="col-12" style="padding: 0px;;">
+                                                    <h4 style="margin: 0px;">Cambio de refrigerante</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="margin-top: -30;">
+                                                <div class="col-12">
+                                                    <p style="color: var(--color-secundario);">Cambio en oilPlus de 12.000 km</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <mat-divider></mat-divider>
+                         
+                            
+                            <div class="container" style="padding: 20px; margin-top: 30px;">
+                                <div class="row">
+                                    <h2 style="color: var(--color-secundario);">Historico de  mantenimientos</h2>
+                                </div>  
+                                <div class="row linea-suave align-items-center text-start">
+                                    <div class="col-10">
+                                        13 Ene 25 | Cambio de bateria
+                                    </div>
+                                    <div class="col-2">
+                                        <button mat-icon-button aria-label="Love">
+                                            <mat-icon>favorite</mat-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row linea-suave align-items-center text-start">
+                                    <div class="col-10">
+                                        23 Dic 24 | Cambio de llantas
+                                    </div>
+                                    <div class="col-2">
+                                        <button mat-icon-button aria-label="Love">
+                                            <mat-icon>favorite_border</mat-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row linea-suave align-items-center text-start">
+                                    <div class="col-10">
+                                        06 Jun 24 | Cambio de plumillas
+                                    </div>
+                                    <div class="col-2">
+                                        <button mat-icon-button aria-label="Love">
+                                            <mat-icon>favorite_border</mat-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-1 borde-derecha">
+                    
+                  </div>
+                  <div class="col-6">
+                    <div class="text-center">
+                        <div class="container" style="margin-top: 60px;">
+                            <!-- Primera fila -->
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <mat-card class="vehicle-card" appearance="outlined" [routerLink]="['/listcar']">
+                                        <img mat-card-image src="/assets/images/Imagen007HorizontalVehiculo.webp" alt="Vehiculos de usuario">
+                                        <div class="overlay">
+                                            <span>Vehículos</span>
+                                        </div>
+                                    </mat-card>
+                                </div>
+                            </div>
+                    
+                            <!-- Segunda fila -->
+                            <div class="row justify-content-center mt-3">
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <mat-card class="vehicle-card" appearance="outlined">
+                                        <img mat-card-image src="/assets/images/Imagen007HorizontalVehiculo.webp" alt="Vehiculos de usuario">
+                                        <div class="overlay">
+                                            <span>Gestión de flota</span>
+                                        </div>
+                                    </mat-card>
+                                </div>
+                            </div>
+                    
+                            <!-- Tercera fila -->
+                            <div class="row justify-content-center mt-3">
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <mat-card class="vehicle-card" appearance="outlined">
+                                        <img mat-card-image src="/assets/images/Imagen007HorizontalVehiculo.webp" alt="Vehiculos de usuario">
+                                        <div class="overlay">
+                                            <span>Grupos familia | Amigos</span>
+                                        </div>
+                                    </mat-card>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+
+</div>

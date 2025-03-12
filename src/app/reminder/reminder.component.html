@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <app-header></app-header>
+      </div>
+    </div>
+    <div class="row">
+        <div class="container d-flex justify-content-center align-items-center vh-100">
+            <div class="row w-80 text-center">
+              <div class="col-6">
+                <div class="divImagenDerecha">
+                    <img src="/assets/images/Imagen005VerticalCrearAlerta.webp" class="imagenDerecha img-fluid" alt="Imagen 1">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="container" style="margin-top: -40px;">
+                    <div class="row">
+                        <div class="col-12 text-white p-3 mb-2"><h1>Crear recordatorio</h1></div>
+                        <div class="col-12 text-white p-3 mb-2">
+                            <form [formGroup]="recordatorioForm" (ngSubmit)="onSubmit()">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Selecciones el tipo</mat-label>
+                                    <select matNativeControl required formControlName="tipo">
+                                      <option value="preventivo">Preventivo</option>
+                                      <option value="correctivo">Correctivo</option>
+                                    </select>
+                                </mat-form-field>
+                                
+                                
+                                <!-- Campo de titulo con Material -->
+                                <mat-form-field appearance="outline">
+                                  <mat-label>Titulo</mat-label>
+                                  <input matInput formControlName="titulo">
+                                  <mat-error *ngIf="recordatorioForm.get('titulo')?.hasError('required')">
+                                    Titulo requerido
+                                  </mat-error>
+                                  <mat-error *ngIf="recordatorioForm.get('titulo')?.hasError('minlength')">
+                                    Debe tener al menos 4 caracteres
+                                  </mat-error>
+                                </mat-form-field>
+
+                                <!-- Campo de detalle con Material -->
+                                <mat-form-field appearance="outline">
+                                  <mat-label>Detalle</mat-label>
+                                  <input matInput formControlName="detalle">
+                                  <mat-error *ngIf="recordatorioForm.get('detalle')?.hasError('required')">
+                                    Detalle requerido
+                                  </mat-error>
+                                  <mat-error *ngIf="recordatorioForm.get('detalle')?.hasError('minlength')">
+                                    Debe tener al menos 10 caracteres
+                                  </mat-error>
+                                </mat-form-field>
+
+                                <!-- Campo de fecha con Material -->
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Seleccione fecha</mat-label>
+                                    <input matInput [matDatepicker]="picker" formControlName="fecha">
+                                    <mat-hint>DD/MM/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+                                
+                                <!--Repetir-->
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Repetir</mat-label>
+                                    <select matNativeControl required formControlName="repetir">
+                                      <option value="mensual">Mensual</option>
+                                      <option value="semana">Semanal</option>
+                                      <option value="diario">Diario</option>
+                                      <option value="anual">Anual</option>
+                                    </select>
+                                </mat-form-field>
+
+                                <!--Vehiculo-->
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Vehiculo</mat-label>
+                                    <select matNativeControl required formControlName="vehiculo">
+                                      <option value="fvv366">FVV 366</option>
+                                      <option value="amz456">AMZ 456</option>
+                                      <option value="dem123">DEM 123</option>
+                                    </select>
+                                </mat-form-field>
+
+
+
+                                <!-- Botón de enviar con Material -->
+                                <button mat-raised-button type="submit" [disabled]="recordatorioForm.invalid" class="custom-button">
+                                  GUARDAR
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

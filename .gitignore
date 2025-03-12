@@ -1,0 +1,45 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Directorios generados
+dist/
+out-tsc/
+coverage/
+
+# Editor y sistema operativo
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.vscode-test/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Archivos de configuración local
+.angular/
+.env
+.env.local
+.env.*.local
+*.local
+*.log
+*.bak
+
+# Archivos de construcción y cache
+.tmp/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Compilados de TypeScript
+*.js
+*.d.ts
+*.map
+
+# Caché de Angular CLI
+.angular/cache/
