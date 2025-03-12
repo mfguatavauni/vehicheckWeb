@@ -1,0 +1,104 @@
+<div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+          <app-header></app-header>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 22px;">
+        <div class="col-12">
+            <h1>HISTORIAL VEHÍCULO AAA316</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="p-3" style="width: 80%; min-height: 400px; border-radius: 4px;">
+            <!-- Contenido interno -->
+            <div class="container" style="margin-top: 24px;">
+                <div class="row">
+                    <div class="col-6">
+                        <!--Datos del vehiculo-->
+                        <div class="container">
+                            <div>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 d-flex justify-content-center">
+                                        <mat-card class="vehicle-card" appearance="outlined" [routerLink]="['/listcar']">
+                                            <img mat-card-image src="/assets/images/Imagen007HorizontalVehiculo.webp" alt="Vehiculos de usuario">
+                                            <div class="overlay">
+                                                <span>Placa: AAA316</span>
+                                            </div>
+                                        </mat-card>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3></h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p><strong>Marca:</strong> Toyota</p>
+                                    <p><strong>Modelo:</strong> Corolla</p>
+                                    <p><strong>Color:</strong> Rojo</p>
+                                    <p><strong>Fecha de ingreso:</strong> 2025-03-12</p>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <!--Datos de los historicos-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3>Historial de mantenimiento</h3>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: -20px;">
+                                <div class="col-12">
+                                    <mat-list>
+                                        <mat-list-item>
+                                            <span matListItemTitle>15 de marzo de 2025 (40,000 km)</span>
+                                            <span matListItemLine>
+                                                Cambio de aceite y filtro de aceite. Se utilizó aceite sintético 5W-30. Sin novedades.
+                                            </span>
+                                            <span>Taller: SuperFilter de la sabana</span>
+                                        </mat-list-item>
+                                        <mat-list-item>
+                                            <span matListItemTitle>20 de junio de 2024 (30,000 km)</span>
+                                            <span matListItemLine>
+                                                Rotación y balanceo de llantas. Desgaste uniforme. Sin novedades.
+                                            </span>
+                                            <span>Taller: Autoniza</span>
+                                        </mat-list-item>
+                                        <mat-list-item>
+                                            <span matListItemTitle>30 de enero de 2023 (20,000 km)</span>
+                                            <span matListItemLine>
+                                                Cambio de frenos delanteros. Las pastillas estaban al 10% de vida útil. Sin novedades.
+                                            </span>
+                                            <span>Taller: Autoniza</span>
+                                        </mat-list-item>
+                                        <mat-list-item>
+                                            <span matListItemTitle>15 de octubre de 2022 (10,000 km)</span>
+                                            <span matListItemLine>
+                                                Cambio de aceite y filtro de aire. Sin anomalías.
+                                            </span>
+                                            <span>Taller: Autoniza</span>
+                                        </mat-list-item>
+                                    </mat-list>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center align-items-center" style="margin-top: 12px;">
+        <button mat-fab extended class="buttonApp" (click)="goList()">
+            <mat-icon>replay</mat-icon>
+            Regresar
+        </button>
+    </div>
+</div>

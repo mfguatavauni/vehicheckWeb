@@ -30,7 +30,7 @@ const ELEMENT_DATA: ListadoVehiculos[] = [
 })
 export class ListcarComponent implements OnInit 
 {
-  displayedColumns: string[] = ['placa', 'tipo', 'acciones'];
+  displayedColumns: string[] = ['placa', 'tipo', 'acciones' ];
   dataSource = ELEMENT_DATA;  
 
 
@@ -56,7 +56,12 @@ export class ListcarComponent implements OnInit
 
   goAddVehicle()
   {
-    //this.router.navigate(['/addcar']);
+    this.router.navigate(['/addcar']);
+  }
+
+  godetailVehicle(placa: string)
+  {
+    this.router.navigate(['/historycar']);
   }
 
 }

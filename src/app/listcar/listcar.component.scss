@@ -10,3 +10,10 @@ table {
   text-align: center !important; 
   justify-content: center !important;
 }
+
+
+button[disabled] {
+  color: rgba(118, 118, 118, 0.99) !important; /* Rojo con opacidad */
+  background-color: rgba(0, 0, 0, 0.1) !important; /* Fondo rojo claro */
+  cursor: not-allowed; /* Cambia el cursor */
+}

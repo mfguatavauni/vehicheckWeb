@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <app-header></app-header>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 22px;">
+      <div class="col-12">
+          <h1>AGREGAR VEHICULO</h1>
+      </div>
+    </div>
+    
+    <div class="row" style="margin-top: 40px;">
+      <div class="container">
+        <div class="row w-80 text-center">
+          <div class="col-6">
+            <div class="divImagenDerecha">
+                <img src="/assets/images/Imagen007HorizontalVehiculo.webp" class="imagenDerecha img-fluid" alt="Imagen 1">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="container" style="margin-top: -40px;">
+                <div class="row">
+                    <div class="col-12 text-white p-3 mb-2"></div>
+                    <div class="col-12 text-white p-3 mb-2">
+                        <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+                            
+                            <!-- Placa -->
+                            <mat-form-field appearance="outline">
+                              <mat-label>Placa</mat-label>
+                              <input matInput formControlName="placa" maxlength="6">
+                              <mat-error *ngIf="carForm.get('placa')?.hasError('required')">
+                                Placa requerida
+                              </mat-error>
+                              <mat-error *ngIf="carForm.get('placa')?.hasError('minlength')">
+                                Debe tener al menos 6 caracteres
+                              </mat-error>
+                            </mat-form-field>
+
+                            <!-- Tipo vehiculo -->
+                            <mat-form-field appearance="outline">
+                                <mat-label>Selecciones el tipo vehiculo</mat-label>
+                                <select matNativeControl required formControlName="tipoVehiculo">
+                                  <option value="automovil" selected>Automovil</option>
+                                  <option value="camioneta">Camioneta</option>
+                                  <option value="camion">Camion</option>
+                                </select>
+                            </mat-form-field>
+                            
+                            <!-- Tipo combustible -->
+                            <mat-form-field appearance="outline">
+                                <mat-label>Selecciones el tipo combustible</mat-label>
+                                <select matNativeControl required formControlName="tipoCombustible">
+                                  <option value="gasolina" selected>Gasolina</option>
+                                  <option value="electrico">Electrico</option>
+                                  <option value="hibrido">Hibrido</option>
+                                  <option value="Diesel">Diesel</option>
+                                </select>
+                            </mat-form-field>
+
+
+
+                            <!-- Botón de enviar con Material -->
+                            <button mat-raised-button type="submit" [disabled]="carForm.invalid" class="custom-button">
+                              GUARDAR
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+</div>
