@@ -5,6 +5,8 @@ import { ReminderComponent } from './reminder/reminder.component';
 import { ListcarComponent } from './listcar/listcar.component';
 import { AddcarComponent } from './addcar/addcar.component';
 import { HistorycarComponent } from './historycar/historycar.component';
+import { FamilygroupComponent } from './familygroup/familygroup.component';
+import { AddfamilygroupComponent } from './addfamilygroup/addfamilygroup.component';
 
 export const routes: Routes = [
     {path: '', component: LoginComponent},
@@ -12,5 +14,7 @@ export const routes: Routes = [
     {path: 'reminder',  component: ReminderComponent},
     {path: 'listcar', component: ListcarComponent},
     {path: 'addcar', component: AddcarComponent},
-    {path: 'historycar', component: HistorycarComponent}
+    {path: 'historycar', component: HistorycarComponent},
+    {path: 'familygroup', component: FamilygroupComponent},
+    {path: 'addfamilygroup', component: AddfamilygroupComponent}
 ];

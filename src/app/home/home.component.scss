@@ -25,3 +25,9 @@
     text-align: left;
   }
   
+
+  .vehicle-card.disabled {
+    opacity: 0.5; /* Reduce la visibilidad */
+    pointer-events: none; /* Bloquea interacciones */
+    filter: grayscale(100%); /* Convierte la imagen en escala de grises */
+  }

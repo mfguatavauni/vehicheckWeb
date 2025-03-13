@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <app-header></app-header>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 22px;">
+      <div class="col-12">
+          <h1>AGREGAR GRUPO FAMILIAR</h1>
+      </div>
+    </div>
+    
+    <div class="row" style="margin-top: 40px;">
+      <div class="container">
+        <div class="row w-80 text-center">
+          <div class="col-6">
+            <div class="divImagenDerecha">
+                <img src="/assets/images/Imagen007HorizontalVehiculo.webp" class="imagenDerecha img-fluid" alt="Imagen 1">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="container" style="margin-top: -40px;">
+                <div class="row">
+                    <div class="col-12 text-white p-3 mb-2"></div>
+                    <div class="col-12 text-white p-3 mb-2">
+                        <form [formGroup]="familyForm" (ngSubmit)="onSubmit()">
+                            
+                            <!-- Grupo -->
+                            <mat-form-field appearance="outline">
+                              <mat-label>Nombre del grupo</mat-label>
+                              <input matInput formControlName="nombre" maxlength="6">
+                              <mat-error *ngIf="familyForm.get('nombre')?.hasError('required')">
+                                Nombre del grupo
+                              </mat-error>
+                              <mat-error *ngIf="familyForm.get('nombre')?.hasError('minlength')">
+                                Debe tener al menos 6 caracteres
+                              </mat-error>
+                            </mat-form-field>
+
+                            <!-- Capacidad pasajeros-->
+                            <mat-form-field appearance="outline">
+                              <mat-label>Capacidad de pasajeros</mat-label>
+                              <select matNativeControl required formControlName="capacidad">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="mas">mas de 5</option>
+                              </select>
+                          </mat-form-field>                       
+
+
+                            <!-- Frecuencia -->
+                            <mat-form-field appearance="outline">
+                                <mat-label>Selecciones frecuencia</mat-label>
+                                <select matNativeControl required formControlName="frecuenciaMantenimiento">
+                                  <option value="mensual" selected>Mensual</option>
+                                  <option value="semanal">Semanal</option>
+                                </select>
+                            </mat-form-field>
+
+                            <!-- promedio de edades -->
+                            <mat-form-field appearance="outline">
+                              <mat-label>Rango de edades</mat-label>
+                              <select matNativeControl required formControlName="promedioEdades">
+                                <option value="menorde20" selected>Menor de 20</option>
+                                <option value="rango2140">21 a 40</option>
+                                <option value="rango4160">41 a 60</option>
+                                <option value="mayor60">Mayor de 60</option>
+                              </select>
+                          </mat-form-field>
+
+
+                            <!-- Botón de enviar con Material -->
+                            <button mat-raised-button type="submit" [disabled]="familyForm.invalid" class="custom-button">
+                              GUARDAR
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+</div>
